@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/android-chrome-512x512.png">
+    <title>Matemu Baloyi portfolio</title>
+</head>
+<body>
+    
+    <header>
+        <a href="#homes" class="logo"><span class="matemu" style="color: rgb(49, 49, 190);">Matemu</span>Baloyi</a>
+
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#homes" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li> 
+                <li><a href="#contacts">Contacts</a></li>
+            </ul> 
+
+            <div class="menu" id="menu-toggle">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(216, 202, 202); transform: scale(1);">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="close-menu" id="close-menu">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgb(216, 202, 202); transform: scale(1);">
+                            <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                        </svg>
+                    </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="#homes" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li> 
+            <li><a href="#contacts">Contacts</a></li>
+            
+        </ul>
+    </div>
+
+    <script>
+       document.getElementById('menu-toggle').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    document.getElementById('mobile-nav').style.display = 'flex';
+    document.getElementById('menu-toggle').style.display = 'none';
+    document.getElementById('close-menu').style.display = 'block';
+});
+
+document.getElementById('close-menu').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior of the link
+    document.getElementById('mobile-nav').style.display = 'none';
+    document.getElementById('menu-toggle').style.display = 'block';
+    document.getElementById('close-menu').style.display = 'none';
+});
+    </script>
+    
+
+    <section class="homes" id="homes">
+        
+        <div class="dalas-info">
+            <h1>Welcome to my website</h1>
+            <h3>Hello, My name is Matemu</h3>
+
+            <div class="text-animate">
+                <h2>Web developer</h2>
+            </div>
+
+            <p>This is my official portfolio website where i showcase my projects.</p>
+            
+            <div class="btn-box">
+                <a href="mhumprhey3@gmail.com" class="btn">Hire me<i class='bx bx-right-arrow-alt'></i></a>
+                <a href="img/Matemu Baloyi CV.pdf" target="_blank" class="btn d-CV">CV<i class='bx bx-download' ></i></a>
+            </div>
+            <div class="social-media">
+
+               <div class="Icons">
+                  <a href="https://www.instagram.com/matimu.baloyi"><i class='bx bxl-instagram' ></i></a>
+                  <span></span>
+                </div>
+
+                <div class="Icons">
+                   <a href="https://www.facebook.com/matimu.baloyi.710"><i class='bx bxl-facebook' ></i></a>
+                   <span></span>
+                </div>
+
+                <div class="Icons">
+                  <a href="https://wa.me/+27607289278"><i class='bx bxl-whatsapp' ></i></a>
+                  <span></span>
+                </div>
+
+                <div class="Icons">
+                    <a href="https://www.linkedin.com/in/matemu-baloyi-b27aba2a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="img-dalas">
+            <img src="img/IMG-20200815-WA0016.jpg" alt="">
+        </div>
+        
+    </section>
+
+    <section class="about" id="about">
+            <h1 class="aboutheader">ABOUT</h1>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/IMG-20200815-WA0016.jpg" class="image" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        I'm Matemu, and I'm excited to share my background with you.
+                        With a strong passion for technology, I specialize in software development and web development. 
+                        My career has been marked by enriching experiences and challenging projects, including developing personalized websites and creating solutions for real-world problems.
+                        These experiences have honed my skills and shaped my professional growth. I am dedicated to continuous learning and am eager to contribute to innovative and impactful projects in the future. 
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <!--<p class="tab-links" onclick="opentab('experience')">Experience</p>-->
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                    </div>     
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming languages</span><br>- Html,css</li>
+                            <li>- Java</li>
+                            <li>- C++</li>
+                            <li>- SQL</li>
+                            <li>- php</li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>University of Venda</span><br></li>
+                            <li>Bsc in Computer Sciences</li>
+                            <li><span>2021-2024</span></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificates">
+                        <ul>
+                            <li>ALX AICE : <span>2024: February-April</span><a href="/img/AICE matemubaloyi.jpg" text-decoration="underline">   pdf</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio_header">
+            <h3>PROJECTS</h3>
+        </div>
+
+        
+        <div class="projects" id="projects">
+            
+            <div class="portfolio_image">
+              <div class="hotel_management_system">
+                  <img src="img/coming soon.jpg" alt="">
+                  <h3>
+                     Hotel Management System
+                  </h3>
+                  <div class="btn-box2">
+                    <a href="" class="Web_btn">Github</a>
+                    <a href="" target="_blank" class="Web_btn">Live Demo</a>
+                </div>
+             </div> 
+            </div>
+
+            <div class="portfolio_image">
+              <div class="Online_shopping_page">
+                  <img src="img/coming soon.jpg" alt="">
+                  <h3>
+                     Shopping
+                  </h3>
+                  <div class="btn-box2">
+                    <a href="" class="Web_btn">Github</a>
+                    <a href="" target="_blank" class="Web_btn">Live Demo</a>
+                </div>
+             </div>
+            </div>
+            
+            <div class="portfolio_image">
+              <div class="Traffic_department_system">
+                  <img src="img/Screenshot (210).png" alt="" >
+                  <h3>
+                    Traffic Department Queueing System
+                  </h3>
+                  <div class="btn-box2">
+                    <a href="" class="Web_btn">Github</a>
+                    <a href="" target="_blank" class="Web_btn">Live Demo</a>
+                </div>
+             </div>
+            </div>
+
+        </div>
+    </section>
+ 
+   
+
+   <section class="contacts" id="contacts">
+     <div class="contact_container">
+        <h2 class="contact_header">CONTACTS</h2>
+        <div class="contact_wrapper">
+            <div class="contact_form">
+                <h3 class="notice">Send me a message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group_message">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"  required></textarea>
+                    </div>
+                    <button type="button" onclick="sendEmail()">Send</button>
+                </form>
+            </div>
+            <div class="contact_information">
+            <h3>More contact information</h3>
+            <p><i class='bx bxs-phone' ></i>+27 60 728 9278</p>
+            <p><i class='bx bxs-envelope' ></i>matemubaloyi@gmail.com</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+        async function sendEmail() {
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    try {
+        const response = await fetch('/.netlify/functions/send_email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        alert(result.message); // Display success message
+    } catch (error) {
+        console.error('Error sending email:', error.message);
+        alert('Failed to send email. Please try again later.'); // Display error message
+    }
+}
+    </script>
+   </section>
+
+   <footer class="ftco-footer ftco-section">
+		<div class="footer-container">
+		  <div class="footer_row">
+			<div class="col-md-12">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Matemu's <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank">portfolio</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+   <script>
+
+     const tablinks = document.getElementsByClassName("tab-links")
+        const tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+            
+        }
+    function showNavsidebar() {
+        const sidebar = document.querySelector('.Navsidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideNavsidebar() {
+        const sidebar = document.querySelector('.Navsidebar')
+        sidebar.style.display = 'none'
+    }
+   </script>
+    <script src="https:smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>

@@ -254,7 +254,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
     };
 
     try {
-        const response = await fetch('https://matemubaloyiportfolio.netlify.app/.netlify/functions/send_email', {
+        const response = await fetch('/.netlify/functions/send_email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

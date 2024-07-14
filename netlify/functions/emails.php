@@ -7,8 +7,12 @@ header("Access-Control-Allow-Credentials: true");
 
 // Ensure that the request method is OPTIONS for preflight
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header("HTTP/1.1 200 OK");
     exit();
 }
+
+// Logging input data for debugging
+error_log('Received input: ' . file_get_contents('php://input'));
 
 require '../vendor/autoload.php';
 
@@ -20,21 +24,13 @@ $mail = new PHPMailer(true);
 try {
     // Parse JSON input from frontend
     $input = json_decode(file_get_contents('php://input'), true);
-    if ($input === null) {
-        throw new Exception("Invalid JSON");
-    }
 
-    $name = htmlspecialchars($input['name'] ?? '');
-    $email = htmlspecialchars($input['email'] ?? '');
-    $message = htmlspecialchars($input['message'] ?? '');
+    // Logging parsed input for debugging
+    error_log('Parsed input: ' . print_r($input, true));
 
-    // Log the incoming data
-    error_log("Received data: " . json_encode($input));
-
-    // Check if all required fields are present
-    if (empty($name) || empty($email) || empty($message)) {
-        throw new Exception("Missing required fields");
-    }
+    $name = htmlspecialchars($input['name']);
+    $email = htmlspecialchars($input['email']);
+    $message = htmlspecialchars($input['message']);
 
     // Configure PHPMailer
     $mail->isSMTP();
@@ -45,7 +41,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->setFrom(getenv('SMTP_USERNAME'), 'Matemu');
+    $mail->setFrom(getenv('SMTP_USERNAME'), 'Your Name');
     $mail->addAddress(getenv('SMTP_USERNAME'));
 
     $mail->isHTML(true);
@@ -56,7 +52,5 @@ try {
     $mail->send();
     echo json_encode(['message' => 'Message has been sent']);
 } catch (Exception $e) {
-    error_log("Error: " . $e->getMessage());
-    echo json_encode(['message' => "Message could not be sent. Error: " . $e->getMessage()]);
+    echo json_encode(['message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
 }
-?>

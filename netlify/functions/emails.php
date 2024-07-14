@@ -11,6 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
+// Check for the secret token
+$provided_secret = $_SERVER['HTTP_X_SECRET'] ?? '';
+$expected_secret = getenv('NETLIFY_EMAILS_SECRET');
+
 // Logging input data for debugging
 error_log('Received input: ' . file_get_contents('php://input'));
 
@@ -41,7 +45,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->setFrom(getenv('SMTP_USERNAME'), 'Your Name');
+    $mail->setFrom(getenv('SMTP_USERNAME'), 'Matemu');
     $mail->addAddress(getenv('SMTP_USERNAME'));
 
     $mail->isHTML(true);

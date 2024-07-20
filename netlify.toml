@@ -1,3 +1,2 @@
-[build]
   publish = "src"
-  functions = "netlify/functions"
+  functions = "functions"

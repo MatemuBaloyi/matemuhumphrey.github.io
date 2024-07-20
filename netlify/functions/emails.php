@@ -11,9 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-// Check for the secret token
-$provided_secret = $_SERVER['HTTP_X_SECRET'] ?? '';
-$expected_secret = getenv('NETLIFY_EMAILS_SECRET');
 
 // Logging input data for debugging
 error_log('Received input: ' . file_get_contents('php://input'));

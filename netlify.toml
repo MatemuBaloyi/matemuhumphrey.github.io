@@ -1,7 +1,5 @@
- [build]
+[build]
   publish = "src"
-  functions = "netlify/functions"
+  functions = ".netlify/functions"
 
-[functions]
-  directory = "netlify/functions"
 

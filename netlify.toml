@@ -1,2 +1,8 @@
-  publish = "src"
-  functions = "functions"
+ [build]
+  publish = "public"
+  
+ [functions]
+  external_node_modules = [
+    "module-one",
+    "module-two"
+  ]

@@ -3,5 +3,5 @@
   functions = "functions"
 
 [functions]
-  directory = "functions"
+  directory = "netlify/functions"
 

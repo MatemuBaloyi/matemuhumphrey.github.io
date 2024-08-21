@@ -220,7 +220,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <div class="contact_wrapper">
             <div class="contact_form">
                 <h3 class="notice">Send me a message</h3>
-                <form id="contact-form">
+                <form id="contact-form" action="https://formsubmit.co/f90ec5257af4cc64bc96c13f1931f0cf" method="POST">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -229,11 +229,15 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    <div class="form-group">
+                        <label for="name">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
                     <div class="form-group_message">
                         <label for="message">Message:</label>
                         <textarea id="message" name="message"  required></textarea>
                     </div>
-                    <button type="button" onclick="sendEmail()">Send</button>
+                    <button type="button" >Send</button>
                 </form>
             </div>
             <div class="contact_information">

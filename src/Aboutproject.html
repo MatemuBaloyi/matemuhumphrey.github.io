@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutproject.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#homes" class="logo"><span class="matemu" style="color: rgb(49, 49, 190);">Matemu</span>Baloyi</a>
+
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#homes" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+
+            <div class="menu" id="menu-toggle">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+                        style="fill: rgba(216, 202, 202); transform: scale(1);">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="close-menu" id="close-menu">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+                        style="fill: rgb(216, 202, 202); transform: scale(1);">
+                        <path
+                            d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="about-project-container">
+        <div class="about-project-header">
+            <h1>About Project</h1>
+            <p>Learn more about the project you selected.</p>
+        </div>
+        <div class="project-links">
+            <a href="index.html" class="back-button">Back to Projects</a>
+        </div>
+        <div class="about-project">
+            <h1 id="project-title">Project Title</h1>
+            <p id="project-description">Project description goes here...</p>
+            <div class="project-image">
+                <img src="" alt="Grocery List Calculator" id="project-image1">
+
+            </div>
+            <div class="github_link">
+                <a href="#" id="github-link" target="_blank"></a>
+            </div>
+        </div>
+
+    </div>
+    <footer class="ftco-footer ftco-section" style="margin-top: 30px;">
+        <div class="footer-container">
+            <div class="footer_row">
+                <div class="col-md-12">
+
+                    <p> &copy;
+                        <script>document.write(new Date().getFullYear());</script> Designed by Matemu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const project = params.get('project');
+
+        if (project === 'grocery-list-calculator') {
+            document.getElementById('project-title').textContent = 'Grocery List Calculator';
+            document.getElementById('project-description').textContent = 'The Grocery List Calculator is a simple and user-friendly web tool designed to help users plan their shopping and manage their grocery budgets. It allows users to add grocery items, specify quantities and prices, and instantly see the total cost of their list.\n\nHow it works:\n1. Item Input: Users can enter the name of each grocery item they want to buy.\n2. Quantity & Price: For every item, users input the quantity and price per unit.\n3. Auto Calculation: The calculator multiplies quantity by unit price to calculate the total cost per item.\n4. List Management: Users can add multiple items, remove unwanted ones, or edit existing entries.\n5. Real-Time Totals: The tool updates the overall total cost automatically whenever items are added, removed, or changed.\n\nPerfect for students, families, or anyone looking to stay within budget while grocery shopping.';
+            document.getElementById('project-image1').src = 'img/list_calculator.png';
+            // Add GitHub link
+            document.getElementById('github-link').href = 'https://github.com/MatemuBaloyi/GroceryListCalculator.github.io.git';
+            document.getElementById('github-link').textContent = 'View on GitHub';
+        } else if (project === 'elsie-store') {
+            document.getElementById('project-title').textContent = 'ElsieStore';
+            document.getElementById('project-description').textContent = '';
+            // Add GitHub link
+            document.getElementById('github-link').href = '';
+            document.getElementById('github-link').textContent = 'View on GitHub';
+        } else if (project === 'traffic-department') {
+            document.getElementById('project-title').textContent = 'Traffic Department Queueing System';
+            document.getElementById('project-description').textContent = '';
+            // Add GitHub link
+            document.getElementById('github-link').href = '';
+            document.getElementById('github-link').textContent = 'View on GitHub';
+        }
+    </script>
+
+</body>
+
+</html>

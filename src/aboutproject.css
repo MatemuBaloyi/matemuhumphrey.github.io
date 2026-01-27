@@ -1,3 +1,16 @@
+:root{
+    --bg-color:#292f35;
+    --gradient-white-bg:linear-gradient(0deg,#FFF 0%,#edf4Fa 51%,#e5eef7 100%);
+    --gradient-color-bg:linear-gradient(180deg,rgb(60, 104, 247)0%,
+                                                rgb(64, 133, 223)50%,
+                                                rgb(9, 156, 201)100%);
+    --main-color:#3c5cc4;
+    --font-color:#e9ecf0;
+    --hover-box-shadow:rgba(0,0,0,0,19)0px 10px 20px,
+                       rgba(0,0,0,0,23)0px 6px 6px;
+
+    --text-color:#e9ecf0;                   
+}
 /* Styles for the About Project section */
 .about-project-container{
     display: flex;
@@ -35,27 +48,77 @@
     color: white;
     transition: background-color 0.3s ease;
 }
-.about-project {
-    background-color: #dbd4d4;
+#project-container {
+    background-color: var(--bg-color);
     padding: 10px;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
-.about-project h1 {
+.ProjectTitle {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #222;
+    color: var(--text-color);
+}
+.project-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.project-banner {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
 }
 
-.about-project p {
-    color: black;
-    font-size: 1rem;
+.ProjectDescription {
+    color: var(--text-color);
+    font-size: 1.6rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+}
+.DescrptionContent {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.Features {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.Tech-Header {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tech-tags {
+    margin-bottom: 15px;
+}
+
+.btn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
 .about-project a {
@@ -102,4 +165,21 @@
 
 .about-project a:hover {
     text-decoration: underline;
+}
+@media  screen and (max-width: 768px) {
+    .about-project-container {
+        padding: 10px;
+    }
+    .project-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-banner {
+        max-width: 100%;
+    }
+    #project-container {
+        text-align: center;
+        margin-bottom: 30px;
+}
+    
 }

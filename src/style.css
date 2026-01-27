@@ -295,7 +295,7 @@ section .homes{
     align-items:center;
     width: 300px;
     height: 410px;
-    background-color: #615f5f;
+    background-color: #343a3f;
     border-radius: 10px;
     overflow: hidden; 
     transition: 0.2s; 
@@ -347,6 +347,7 @@ section .homes{
     background: var(--gradient-color-bg);
     color: #fff;
 }
+
 /*--------------second about---------------*/
 
 .about .aboutheader{
@@ -428,15 +429,16 @@ section .homes{
 }
 .Certificate_button{
     padding: 3px 5px; 
-    background-color: blue; 
+    border: 2px solid blue;
+    background-color: white; 
+    color: blue;
     margin-left: 25px; 
     border-radius: 5px;
     border: none;
 }
 .Certificate_button:hover{
-    border: 2px solid blue;
-    background-color: white;
-    color: black;
+    background-color: blue;
+    color: white;
 }
 .tab-contents{
     display: none;
@@ -603,8 +605,8 @@ button:hover{
     }
     
     .container{
-        padding:20px;
-        margin-left: 10px;
+        padding: 13px;
+        margin-left: -5px;
     }
     .contact_wrapper{
         grid-template-columns: 1fr;
@@ -668,7 +670,7 @@ button:hover{
     }
     .tab-links{
         font-size: 30px;
-
+        margin-right: 9px;
     }
 
 
@@ -713,7 +715,8 @@ button:hover{
     .projects .portfolio_image img{
         max-height: 270px;
         object-fit: cover;
-        border-radius: 10px;
+        padding: 11px;
+        border-radius: 20px;
         
     }
     .projects .portfolio_image h3{
@@ -746,10 +749,4 @@ button:hover{
     .portfolio_image{
         margin: auto;
     }
-}
-@media  screen and (max-width :1280px) {
-    
-}
-@media  screen and (max-width :1526px) {
-    
 }

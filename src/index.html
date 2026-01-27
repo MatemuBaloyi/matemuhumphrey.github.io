@@ -7,7 +7,7 @@
     <meta name="keywords" content="Matemu Baloyi, portfolio, web developer, projects, skills">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/x-icon" href="/images/android-chrome-512x512.png">
     <title>Matemu Baloyi portfolio</title>
 </head>
 <body>
@@ -53,14 +53,14 @@
 
     <script>
        document.getElementById('menu-toggle').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default behavior of the link
+    event.preventDefault(); 
     document.getElementById('mobile-nav').style.display = 'flex';
     document.getElementById('menu-toggle').style.display = 'none';
     document.getElementById('close-menu').style.display = 'block';
 });
 
 document.getElementById('close-menu').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default behavior of the link
+    event.preventDefault(); 
     document.getElementById('mobile-nav').style.display = 'none';
     document.getElementById('menu-toggle').style.display = 'block';
     document.getElementById('close-menu').style.display = 'none';
@@ -82,7 +82,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             
             <div class="btn-box">
                 <a href="mailto:matemubaloyi@gmail.com" class="btn">Hire me<i class='bx bx-right-arrow-alt'></i></a>
-                <a href="img/Matemu Baloyi CV.pdf" target="_blank" class="btn d-CV">CV<i class='bx bx-download' ></i></a>
+                <a href="Documents/Matemu curriculum vitae.pdf" target="_blank" class="btn d-CV">CV<i class='bx bx-download' ></i></a>
             </div>
             <div class="social-media">
 
@@ -108,7 +108,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             </div>
         </div>
         <div class="img-dalas">
-            <img src="img/IMG-20250514-WA0030.jpg" alt="">
+            <img src="images/IMG-20250514-WA0030.jpg" alt="">
         </div>
         
     </section>
@@ -118,7 +118,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="img/IMG-20250514-WA0030.jpg" class="image" alt="">
+                    <img src="images/IMG-20250514-WA0030.jpg" class="image" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -130,18 +130,28 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <!--<p class="tab-links" onclick="opentab('experience')">Experience</p>-->
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                         <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
                     </div>     
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming languages</span><br>• Html,Css</li>
-                            <li>• Java</li>
-                            <li>• C++</li>
-                            <li>• SQL</li>
-                            <li>• Php</li>
+                            <li><span>Programming languages</span><br><i class='bx bxl-html5' ></i>Html</li>
+                            <li><i class='bx bxl-css3' ></i> CSS</li>
+                            <li><i class='bx bxl-javascript' ></i> JavaScript</li>
+                            <li><i class='bx bxl-java' ></i>  Java</li>
+                            <li><i class='bx bxl-c-plus-plus' ></i>  C++</li>
+                            <li><i class='bx bxl-database' ></i>  SQL</li>
+                            <li><i class='bx bxl-php' ></i>  Php</li>
                             
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Education Assistant (ICT support)</span><br></li>
+                            <li>Rivoni school for the blind</li>
+                            <li><span> June 2025 - November 2025</span></li>
                             
                         </ul>
                     </div>
@@ -173,40 +183,27 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <div class="projects" id="projects">
             
             <div class="portfolio_image">
-              <div class="hotel_management_system">
-                  <img src="img/elsiestoreimg.png" alt="">
+              <div class="hotel_management_system" >
+                  <img src="images/elsiestoreimg.png" alt="">
                   <h3>
                      ElsieStore
                   </h3>
                   <div class="btn-box2">
-                    <a href="Aboutproject.html?project=elsie-store" class="Web_btn">Read More</a>
-                    <a href="" target="_blank" class="Web_btn">Live Demo</a>
+                    <a href="Aboutproject.html?id=elsie-store" class="Web_btn">Read More</a>
+                    <a href="https://elsiestore.co.za" target="_blank" class="Web_btn">Live Demo</a>
                 </div>
              </div> 
             </div>
 
             <div class="portfolio_image">
               <div class="Online_shopping_page">
-                  <img src="img/list_calculator.png" alt="">
+                  <img src="images/list_calculator.png" alt="">
                   <h3>
                      Grocery List Calculator
                   </h3>
                   <div class="btn-box2">
-                    <a href="Aboutproject.html?project=grocery-list-calculator" class="Web_btn">Read More</a>
+                    <a href="Aboutproject.html?id=grocery-list-calculator" class="Web_btn">Read More</a>
                     <a href="https://grocerylistcalculator.netlify.app" target="_blank" class="Web_btn">Live Demo</a>
-                </div>
-             </div>
-            </div>
-            
-            <div class="portfolio_image">
-              <div class="Traffic_department_system">
-                  <img src="img/Screenshot (210).png" alt="" >
-                  <h3>
-                    Traffic Department Queueing System
-                  </h3>
-                  <div class="btn-box2">
-                    <a href="Aboutproject.html?project=traffic-department" class="Web_btn">Read More</a>
-                    <a href="" target="_blank" class="Web_btn">Live Demo</a>
                 </div>
              </div>
             </div>
@@ -248,11 +245,12 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
 		  <div class="footer_row">
 			<div class="col-md-12">
   
-			  <p> &copy;<script>document.write(new Date().getFullYear());</script> Designed by Matemu | Matemu's <i class="icon-heart color-danger" aria-hidden="true"></i>  <a href="" target="_blank">portfolio</a></p>
+			  <p> &copy; <script>document.write(new Date().getFullYear());</script> Designed by Matemu | Matemu's   <a href="" target="_blank">portfolio</a></p>
 			</div>
 		  </div>
 		</div>
 	  </footer>
+      <script src="projects-data.js"></script>
 
    <script>
 

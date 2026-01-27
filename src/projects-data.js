@@ -2,7 +2,7 @@ const projectsData = {
     "elsie-store": {
         title: "Elsie Store E-Commerce Website",
         image: "images/elsiestoreimg.png",
-        images: ["images/elsiestoreimg.png", "images/elsiestoreimg.png"],
+        images: ["images/elsiestoreimg.png"],
 
         // Description supports multiple paragraphs + bullets
         description: [
@@ -11,14 +11,14 @@ const projectsData = {
         ],
 
         bulletPoints: [
-            "• Built with PHP, JavaScript, and MariaDB",
+            "• Built with PHP, JavaScript, and SQL",
             "• Admin dashboard with CRUD operations",
             "• Multi-image upload using Cloudinary",
             "• Category-based product filtering",
             "• Fully responsive layout"
         ],
 
-        technologies: ["• PHP", " • JavaScript", " • MariaDB", " • Cloudinary"],
+        technologies: ["• PHP", " • JavaScript", " • SQL", " • Cloudinary(For Images)","AfriHost(For hosting)", " • HTML", " • CSS"],
         link: "https://elsiestore.co.za"
     },
 

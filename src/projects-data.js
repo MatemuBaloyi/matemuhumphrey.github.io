@@ -18,7 +18,7 @@ const projectsData = {
             "• Fully responsive layout"
         ],
 
-        technologies: ["• PHP", " • JavaScript", " • SQL", " • Cloudinary(For Images)", "AfriHost(For hosting)", " • HTML", " • CSS"],
+        technologies: ["PHP", "JavaScript", "SQL", "Cloudinary", "AfriHost", "HTML", "CSS"],
         link: "https://elsiestore.co.za"
     },
 
@@ -26,7 +26,7 @@ const projectsData = {
     "grocery-list-calculator": {
         title: "Grocery list calculator",
         image: "images/grocery_list.png",
-        images: ["images/grocery_list.png", "images/grocery_list_2.png"],
+        images: ["images/grocery_list.png"],
         description: [
             "Grocery List Calculator is a web application built to simplify grocery budgeting and planning.",
         ],
@@ -37,7 +37,7 @@ const projectsData = {
             "• Simple and intuitive user interface",
             "• Budget-friendly shopping assistance"
         ],
-        technologies: ["HTML, ", "CSS, ", "JavaScript"],
+        technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://grocerylistcalculator.netlify.app"
     },
     "nwamafanele-claims" :{
@@ -55,7 +55,7 @@ const projectsData = {
             "• Responsive design for all devices",
             "• Integration with backend database"
         ],
-        technologies: ["HTML ,", "CSS ,","JavaScript"],
+        technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://nwamafaneleclaims.co.za"
     }
 

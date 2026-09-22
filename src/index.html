@@ -7,13 +7,21 @@
     <meta name="keywords" content="Matemu Baloyi, portfolio, web developer, projects, skills">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="theme-color" content="#14171c">
+    <meta property="og:title" content="Matemu Baloyi | Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Matemu Baloyi showcasing web development projects and skills.">
+    <meta property="og:image" content="images/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
     <title>Matemu Baloyi portfolio</title>
 </head>
 <body>
     
     <header>
-        <a href="#homes" class="logo"><span class="matemu" style="color: rgb(49, 49, 190);">Matemu</span>Baloyi</a>
+        <a href="#homes" class="logo"><span class="matemu">Matemu</span>Baloyi</a>
 
         
         <nav>
@@ -108,7 +116,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             </div>
         </div>
         <div class="img-dalas">
-            <img src="images/IMG-20250514-WA0030.jpg" alt="">
+            <img src="images/IMG-20250514-WA0030.jpg" alt="Portrait of Matemu Baloyi">
         </div>
         
     </section>
@@ -118,7 +126,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/IMG-20250514-WA0030.jpg" class="image" alt="">
+                    <img src="images/IMG-20250514-WA0030.jpg" class="image" alt="Matemu Baloyi">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -129,11 +137,11 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                         These experiences have honed my skills and shaped my professional growth. I am dedicated to continuous learning and am eager to contribute to innovative and impactful projects in the future. 
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
-                    </div>     
+                        <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event,'certificates')">Certificates</p>
+                    </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Programming languages</span><br><i class='bx bxl-html5' ></i>Html</li>
@@ -165,8 +173,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                     </div>
                     <div class="tab-contents" id="certificates">
                         <ul>
-                            <li>ALX AICE : <span>2024: February-April</span><a href="https://intranet.alxswe.com/certificates/PZYLfXCh3c"  class="Certificate_button">Link</a></li>
-                            <li></li>
+                            <li>ALX AICE : <span>2024: February-April</span><a href="https://intranet.alxswe.com/certificates/PZYLfXCh3c"  class="Certificate_button" target="_blank" rel="noopener">Link</a></li>
                         </ul>
                     </div>
                 </div>
@@ -183,8 +190,8 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <div class="projects" id="projects">
             
             <div class="portfolio_image">
-              <div class="hotel_management_system" >
-                  <img src="images/elsiestoreimg.png" alt="">
+              <div class="project-card" >
+                  <img src="images/elsiestoreimg.png" alt="ElsieStore e-commerce website screenshot">
                   <h3>
                      ElsieStore
                   </h3>
@@ -196,8 +203,8 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             </div>
 
             <div class="portfolio_image">
-              <div class="Online_shopping_page">
-                  <img src="images/list_calculator.png" alt="">
+              <div class="project-card">
+                  <img src="images/list_calculator.png" alt="Grocery List Calculator app screenshot">
                   <h3>
                      Grocery List Calculator
                   </h3>
@@ -209,8 +216,8 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             </div>
 
             <div class="portfolio_image">
-              <div class="Online_shopping_page">
-                  <img src="images/nwamafanelepicture.jpeg" alt="">
+              <div class="project-card">
+                  <img src="images/nwamafanelepicture.jpeg" alt="N'wamafanele Claims Management System screenshot">
                   <h3>
                      N'wamafanele Claims
                   </h3>
@@ -258,7 +265,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
 		  <div class="footer_row">
 			<div class="col-md-12">
   
-			  <p> &copy; <script>document.write(new Date().getFullYear());</script> Designed by Matemu | Matemu's   <a href="" target="_blank">portfolio</a></p>
+			  <p> &copy; <script>document.write(new Date().getFullYear());</script> Designed &amp; built by Matemu Baloyi</p>
 			</div>
 		  </div>
 		</div>
@@ -270,7 +277,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
      const tablinks = document.getElementsByClassName("tab-links")
         const tabcontents = document.getElementsByClassName("tab-contents")
 
-        function opentab(tabname){
+        function opentab(evt, tabname){
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link")
             }
@@ -278,9 +285,9 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab")
             }
-            event.currentTarget.classList.add("active-link")
+            evt.currentTarget.classList.add("active-link")
             document.getElementById(tabname).classList.add("active-tab")
-            
+
         }
     function showNavsidebar() {
         const sidebar = document.querySelector('.Navsidebar')

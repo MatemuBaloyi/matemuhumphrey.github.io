@@ -75,6 +75,24 @@ const projectsData = {
         ],
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://bkstonecladding.co.za"
+    },
+    "service-connect": {
+        title: "ServiceConnect Service Provider Platform",
+        image: "images/serviceconnect.png",
+        images: ["images/serviceconnect.png"],
+        description: [
+            "ServiceConnect is a platform that connects clients with suitable service providers, letting them compare quotes and portfolios and get connected all in one place.",
+            "Clients describe what they need, choose their budget and how many providers they want to hear from, and ServiceConnect helps connect them."
+        ],
+        bulletPoints: [
+            "• Service request flow with budget and provider-count options",
+            "• Compare multiple quotes and portfolios",
+            "• How It Works, Testimonials and FAQs sections",
+            "• WhatsApp integration for instant contact",
+            "• Fully responsive layout"
+        ],
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://servicecon.co.za"
     }
 
 

@@ -57,6 +57,24 @@ const projectsData = {
         ],
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://nwamafaneleclaims.co.za"
+    },
+    "bk-stone-cladding": {
+        title: "BK Stone Cladding Business Website",
+        image: "images/bkstonecladding.png",
+        images: ["images/bkstonecladding.png"],
+        description: [
+            "BK Stone Cladding (Pty) Ltd is a business website built for a stone cladding company, showcasing its services and completed work under the tagline \"Where Stone Becomes Art\".",
+            "The site presents the company's premium stone cladding solutions and makes it easy for potential clients to request a quote or get in touch."
+        ],
+        bulletPoints: [
+            "• Premium dark and gold design matching the brand identity",
+            "• About Us, Services, Our Work and Contact sections",
+            "• Quote request call-to-action",
+            "• WhatsApp integration for instant contact",
+            "• Fully responsive layout"
+        ],
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://bkstonecladding.co.za"
     }
 
 
